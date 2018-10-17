@@ -1,6 +1,7 @@
 # Algorithms and data structures
 
-1) Binary tree
+## Binary tree
 
-  1.1) TODO: implement remove node
-2) Linked list
+### TODO: implement remove node
+
+## Linked list
