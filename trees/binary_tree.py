@@ -26,6 +26,21 @@ class BinaryTree:
         else:
             self.root = BinaryTreeNode(val)
 
+    def invert(self):
+        def i(root):
+            if not root:
+                return None;
+            
+            tmp = root.left
+            root.left = root.right;
+            root.right = tmp;
+            i(root.left)
+            i(root.right)
+
+            return root;
+
+        return i(self.root)
+
     def search(self, val):
 
         def s(root):
