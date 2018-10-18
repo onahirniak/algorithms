@@ -1,6 +1,7 @@
 from trees.binary_tree import BinaryTree
 from trees.binary_tree_factory import BinaryTreeFactory
 from lists.linked_list import LinkedList
+from sorting.sorter import Sorter
 def main():
     tree = BinaryTreeFactory.from_array([5,4,3,2,6,7,8,9,1])
     #tree = BinaryTreeFactory.from_random(30)
@@ -44,6 +45,24 @@ def main():
     linked_list.remove(0)
     linked_list.remove(0)
     linked_list.printList()
+
+    sorter = Sorter()
+
+    print("SELECTION SORT")
+    array = [9,8,7,6,5,4,3,2,1]
+    sorter.selection_sort(array)
+    print (' '.join(str(n) for n in array))
+
+    print("BUBBLE SORT")
+    array = [9,8,7,6,5,4,3,2,1]
+    sorter.selection_sort(array)
+    print (' '.join(str(n) for n in array))
+
+    print("INSERTION SORT")
+    array = [9,8,7,6,5,4,3,2,1]
+    sorter.selection_sort(array)
+    print (' '.join(str(n) for n in array))
+
 
 
 
