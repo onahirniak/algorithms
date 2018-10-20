@@ -2,6 +2,9 @@ from trees.binary_tree import BinaryTree
 from trees.binary_tree_factory import BinaryTreeFactory
 from lists.linked_list import LinkedList
 from sorting.sorter import Sorter
+from hash_tables.hash_functions import Encryption
+from hash_tables.hash_table import HashTable
+
 def main():
     tree = BinaryTreeFactory.from_array([5,4,3,2,6,7,8,9,1])
     #tree = BinaryTreeFactory.from_random(30)
@@ -63,8 +66,16 @@ def main():
     sorter.selection_sort(array)
     print (' '.join(str(n) for n in array))
 
+    hash_table = HashTable()
 
+    hash_table.put("key", 123)
+    hash_table.put("key", 1235)
+    value_1 = hash_table.get("key")
+    print("VALUE 1 FROM HASH TABLE: " + str(value_1))
 
+    hash_table.put("key2", 1234)
+    value_2 = hash_table.get("key2")
+    print("VALUE 2 FROM HASH TABLE: " + str(value_2))
 
 if __name__ == '__main__':
     main()
