@@ -11,6 +11,11 @@
 * [Hashing algoritms comparision](https://softwareengineering.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed)
 
 ## Implemented
+### Graph
+* BFS
+* DFS
+* FindPath
+
 ### Tree
 #### BST
 
@@ -25,6 +30,7 @@
 * Insert
 * Search
 * Reverse
+* Remove
 
 ### Hashtable
 
