@@ -5,6 +5,7 @@ from sorting.sorter import Sorter
 from hash_tables.hash_functions import Encryption
 from hash_tables.hash_table import HashTable
 from graphs.graph import Graph
+from arrays.array_helper import ArrayHelper
 
 def main():
     tree = BinaryTreeFactory.from_array([5,4,3,2,6,7,8,9,1])
@@ -123,6 +124,16 @@ def main():
     path = g.find_shortest_path('A', 'D')
 
     print(path)
+
+    helper = ArrayHelper()
+
+    array = [1,2,3,4,5,6,7,8,9]
+
+    print("ARRAY BINARY SEARCH")
+
+    index = helper.binary_search(array, 8)
+
+    print(index)
     
 
 if __name__ == '__main__':
