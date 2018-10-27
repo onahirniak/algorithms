@@ -14,7 +14,7 @@
 ### Graph
 * BFS
 * DFS
-* FindPath
+* Find path
 
 ### Tree
 #### BST
@@ -50,3 +50,4 @@
 ### Arrays
 
 * Max sub-array
+* Binary search
