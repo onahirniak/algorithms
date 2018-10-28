@@ -6,6 +6,7 @@ from hash_tables.hash_functions import Encryption
 from hash_tables.hash_table import HashTable
 from graphs.graph import Graph
 from arrays.array_helper import ArrayHelper
+from dynamic.dynamic_programming import CoinChange
 
 def main():
     tree = BinaryTreeFactory.from_array([5,4,3,2,6,7,8,9,1])
@@ -134,6 +135,14 @@ def main():
     index = helper.binary_search(array, 8)
 
     print(index)
+
+    coin_change = CoinChange()
+
+    print("COIN CHANGE")
+
+    c = coin_change.minCoins(19, [9,6,5,1])
+
+    print(c)
     
 
 if __name__ == '__main__':
