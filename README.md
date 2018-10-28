@@ -51,3 +51,7 @@
 
 * Max sub-array
 * Binary search
+
+### Dynamic programming
+
+* Change problem
