@@ -11,6 +11,7 @@
 * [Hashing algoritms comparision](https://softwareengineering.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed)
 * [How Raft consensus algorithm is working?](https://raft.github.io/)
 * [Load balancing algorithms](https://serverfault.com/questions/112292/what-kind-of-load-balancing-algorithms-are-there)
+* [The scale qube](https://microservices.io/articles/scalecube.html)
 
 ## Implemented
 ### Graph
