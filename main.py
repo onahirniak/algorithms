@@ -7,6 +7,8 @@ from hash_tables.hash_table import HashTable
 from graphs.graph import Graph
 from arrays.array_helper import ArrayHelper
 from dynamic.dynamic_programming import CoinChange
+from helpers.csv_helper import CsvHelper
+from os.path import dirname, abspath
 
 def main():
     tree = BinaryTreeFactory.from_array([5,4,3,2,6,7,8,9,1])
@@ -143,8 +145,15 @@ def main():
     c = coin_change.minCoins(19, [9,6,5,1])
 
     print(c)
-    
 
+    csvHelper = CsvHelper()
+
+    path = abspath('data.csv')
+    data = csvHelper.read_csv(path)
+
+    print(data)
+
+    
 if __name__ == '__main__':
     main()
     
