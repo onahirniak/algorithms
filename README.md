@@ -9,6 +9,9 @@
 * [Concurrency-Friendly Data Structures](http://www.drdobbs.com/parallel/choose-concurrency-friendly-data-structu/208801371)
 * [What should I know about charsets?](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
 * [Hashing algoritms comparision](https://softwareengineering.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed)
+* [How Raft consensus algorithm is working?](https://raft.github.io/)
+* [Load balancing algorithms](https://serverfault.com/questions/112292/what-kind-of-load-balancing-algorithms-are-there)
+* [The scale qube](https://microservices.io/articles/scalecube.html)
 
 ## Implemented
 ### Graph
@@ -51,3 +54,7 @@
 
 * Max sub-array
 * Binary search
+
+### Dynamic programming
+
+* Change problem
