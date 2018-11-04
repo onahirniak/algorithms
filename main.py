@@ -84,12 +84,12 @@ def main():
 
     g = Graph()
 
-    g.addEdge(0, 1) 
-    g.addEdge(0, 2) 
-    g.addEdge(1, 2) 
-    g.addEdge(2, 0) 
-    g.addEdge(2, 3) 
-    g.addEdge(3, 3)
+    g.add_edge(0, 1) 
+    g.add_edge(0, 2) 
+    g.add_edge(1, 2) 
+    g.add_edge(2, 0) 
+    g.add_edge(2, 3) 
+    g.add_edge(3, 3)
 
     print("GRAPH BFS")
 
@@ -103,30 +103,26 @@ def main():
 
     print("")
 
-    g = Graph({'A': ['B', 'C'],
-             'B': ['C', 'D'],
-             'C': ['D'],
-             'D': ['C'],
-             'E': ['F'],
-             'F': ['C']})
+    g = Graph()
 
-    print("FIND PATH")
+    g.add_edge("A", "B", 7)
+    g.add_edge("A", "D", 5)
+    g.add_edge("B", "C", 8)
+    g.add_edge("B", "D", 9)
+    g.add_edge("B", "E", 7)
+    g.add_edge("C", "E", 5)
+    g.add_edge("D", "E", 15)
+    g.add_edge("D", "F", 6)
+    g.add_edge("E", "F", 8)
+    g.add_edge("E", "G", 9)
+    g.add_edge("F", "G", 11)    
 
-    path = g.find_path('A', 'D')
-
-    print(path)
-
-    print("FIND ALL PATHS")
-
-    paths = g.find_all_paths('A', 'D')
-
-    print(paths)
-
-    print("FIND SHORTEST PATH")
-
-    path = g.find_shortest_path('A', 'D')
-
-    print(path)
+    print("Dijkstra")
+    print(g.graph)
+    print("A -> E:")
+    print(g.shortest_path("A", "E"))
+    print("F -> G:")
+    print(g.shortest_path("F", "G"))
 
     helper = ArrayHelper()
 

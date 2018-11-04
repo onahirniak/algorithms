@@ -1,11 +1,12 @@
 from collections import defaultdict
+from heapq import *
 
 class Graph(object):
     def __init__(self, g=None):
-        self.graph = defaultdict(list) if not g else g
-        
-    def addEdge(self, u, v):
-        self.graph[u].append(v);
+        self.graph = defaultdict(list)
+
+    def add_edge(self, u, v, distance=1):
+        self.graph[u].append((v, distance));
 
     def bfs(self, start):
         visited = [False] * (len(self.graph)) 
@@ -18,7 +19,7 @@ class Graph(object):
 
             print(vertex, end = " ")
 
-            for sibling in self.graph[vertex]:
+            for sibling, distance in self.graph[vertex]:
                 if not visited[sibling]:
                     q.append(sibling)
                     visited[sibling] = True
@@ -33,58 +34,28 @@ class Graph(object):
 
         print(vertex, end = " ")
 
-        for sibling in self.graph[vertex]:
+        for sibling, distance in self.graph[vertex]:
             if not visited[sibling]:
                 self.dfs_util(sibling, visited)
+    
+    def shortest_path(self, start, end):
+        q, seen, dist = [(0,start,())], set(), {start: 0}
 
-    def find_path(self, start, end, path=[]):
-        path = path + [start]
-        if start == end:
-            return path
+        while q:
+            (cost,v1,path) = heappop(q)
+            if v1 in seen: continue
 
-        if not self.graph[start]:
-            return None
-        
-        for sibling in self.graph[start]:
-            if sibling not in path:
-                new_path = self.find_path(sibling, end, path)
-                if new_path:
-                    return new_path
-        
-        return None
+            seen.add(v1)
+            path += (v1,)
 
-    def find_all_paths(self, start, end, path=[]):
-        path = path + [start]
-        if start == end:
-            return [path]
-            
-        if not self.graph[start]:
-            return []
-        
-        paths = []
-        for sibling in self.graph[start]:
-            if sibling not in path:
-                new_paths = self.find_all_paths(sibling, end, path)
-                for new_path in new_paths:
-                    paths.append(new_path)
-        
-        return paths
+            if v1 == end: return (cost, path)
 
-    def find_shortest_path(self, start, end, path=[]):
-        path = path + [start]
+            for v2, c in self.graph[v1]:
+                if v2 in seen: continue
 
-        if start == end:
-            return path
-        
-        if not self.graph[start]:
-            return None
-        
-        shortest = None
+                # Not every edge will be calculated. The edge which can improve the value of node in heap will be useful.
+                if v2 not in dist or cost+c < dist[v2]:
+                    dist[v2] = cost+c
+                    heappush(q, (cost+c, v2, path))
 
-        for sibling in self.graph[start]:
-            if sibling not in path:
-                new_path = self.find_shortest_path(sibling, end, path)
-                if not shortest or len(new_path) < len(shortest):
-                    shortest = new_path
-
-        return shortest
+        return float("inf")
