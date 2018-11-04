@@ -2,6 +2,7 @@
 ### Useful articles and resources:
 
 * [LeetCode](https://leetcode.com/)
+* [HackerRank](https://www.hackerrank.com/dashboard)
 * [InterviewBit](https://www.interviewbit.com/practice/)
 * [Big-O](http://bigocheatsheet.com/)
 * [Algorithms visualisation](https://visualgo.net/en)
@@ -17,7 +18,7 @@
 ### Graph
 * BFS
 * DFS
-* Find path
+* Find path(Dijkstra)
 
 ### Tree
 #### BST
