@@ -59,3 +59,7 @@
 ### Dynamic programming
 
 * Change problem
+
+### String
+
+* Search sub-string(Rabin-Karp)
