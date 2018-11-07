@@ -9,6 +9,7 @@ from arrays.array_helper import ArrayHelper
 from dynamic.dynamic_programming import CoinChange
 from helpers.csv_helper import CsvHelper
 from os.path import dirname, abspath
+from strings.string_helper import StringHelper
 
 def main():
     tree = BinaryTreeFactory.from_array([5,4,3,2,6,7,8,9,1])
@@ -142,12 +143,27 @@ def main():
 
     print(c)
 
+    print("CSV READ")
+
     csvHelper = CsvHelper()
 
     path = abspath('data.csv')
     data = csvHelper.read_csv(path)
 
     print(data)
+
+    print("RABIN KARP")
+
+    string_helper = StringHelper()
+
+    sub_indexes = string_helper.rabin_karp("abcdefg", "de")
+
+    print(sub_indexes)
+
+    sub_indexes = string_helper.rabin_karp("abcdefg", "text")
+
+    print(sub_indexes)
+
 
     
 if __name__ == '__main__':
