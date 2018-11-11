@@ -1,5 +1,11 @@
-from .hash_table_node import HashTableNode
 from .hash_functions import Encryption
+
+class HashTableNode(object):
+
+    def __init__(self, key, value):
+        self.next = None
+        self.key = key
+        self.value = value
 
 class HashTable(object):
     def __init__(self, size=16):

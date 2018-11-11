@@ -1,10 +1,15 @@
-from .linked_list_node import LinkedListNode
-from base.node_visitor import NodeVisitorFactory
+from base.node import Node
+
+class LinkedListNode(Node):
+    def __init__(self, val):
+            
+        Node.__init__(self, val)
+
+        self.next = None
 
 class LinkedList:
     def __init__(self):
         self.root = None
-        self.node_visitor_factory = NodeVisitorFactory()
 
     def push(self, val):
         node = LinkedListNode(val)
@@ -86,5 +91,4 @@ class LinkedList:
             print("NOT FOUND: " + str(val))
 
     def visit(self, node):
-        visitor = self.node_visitor_factory.create()
-        visitor.visit(node)
+        print(node.val)

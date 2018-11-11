@@ -1,12 +1,17 @@
-#from base.node import Node
-from .binary_tree_node import BinaryTreeNode
-from base.node_visitor import NodeVisitorFactory
+from base.node import Node 
+
+class BinaryTreeNode(Node):
+    def __init__(self, val):
+        
+        Node.__init__(self, val)
+
+        self.left = None
+        self.right = None
 
 class BinaryTree:
     
     def __init__(self):
         self.root = None
-        self.node_visitor_factory = NodeVisitorFactory()
 
     def append(self, val):
         self.insert(self.root, val)
@@ -150,5 +155,4 @@ class BinaryTree:
             self.visit(root)
 
     def visit(self, root):
-        visitor = self.node_visitor_factory.create()
-        visitor.visit(root)
+        print(root.val)

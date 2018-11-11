@@ -29,6 +29,9 @@
 * DFS rec/it
 * BFS
 
+#### Interval tree
+* Insert
+
 ### Linked list
 #### Single
 * Insert
