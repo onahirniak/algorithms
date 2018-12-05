@@ -52,8 +52,7 @@ class Graph(object):
 
             for v2, c in self.graph[v1]:
                 if v2 in seen: continue
-
-                # Not every edge will be calculated. The edge which can improve the value of node in heap will be useful.
+                    
                 if v2 not in dist or cost+c < dist[v2]:
                     dist[v2] = cost+c
                     heappush(q, (cost+c, v2, path))

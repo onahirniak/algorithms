@@ -7,6 +7,7 @@ from arrays import ArraysRunner
 from dynamic import DpRunner
 from strings import StringsRunner
 from helpers import CsvHelperRunner
+from combinatorics import CombyRunner
 import sys
 
 def main():
@@ -21,7 +22,8 @@ def main():
         "arrays": ArraysRunner,
         "dp": DpRunner,
         "csv": CsvHelperRunner,
-        "strings": StringsRunner
+        "strings": StringsRunner,
+        "comby": CombyRunner,
     }
 
     runned = False

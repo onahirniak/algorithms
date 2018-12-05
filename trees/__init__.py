@@ -1,4 +1,5 @@
 from .binary_tree_factory import BinaryTreeFactory
+from .interval_tree import IntervalTree, Interval
 
 class TreeRunner():
     @staticmethod
@@ -21,6 +22,22 @@ class TreeRunner():
         tree.invert()
 
         tree.print_dfs_inorder()
+
+
+        print("INTERVAL TREE")
+
+        interval_tree = IntervalTree()
+        interval_tree.append(Interval(1,4))
+        interval_tree.append(Interval(1,3))
+        interval_tree.append(Interval(4,8))
+        interval_tree.append(Interval(12,17))
+
+        interval_tree.dfs_inorder_iterative();
+
+        interval = interval_tree.find_overlap(Interval(2,3))
+
+        print(interval)
+
 
 if __name__ == '__main__':
     TreeRunner.run()
