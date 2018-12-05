@@ -31,6 +31,7 @@
 
 #### Interval tree
 * Insert
+* Search overlap
 
 ### Linked list
 #### Single
@@ -66,3 +67,6 @@
 ### String
 
 * Search sub-string(Rabin-Karp)
+
+### Combinatorics
+* [Catalan](https://en.wikipedia.org/wiki/Catalan_number)
