@@ -13,3 +13,9 @@ class ArraysRunner():
 
         print(index)
 
+        print("SUM OF MAX SUB ARRAY")
+
+        sub_array = helper.max_sub_array([-1,-2,5,-20,30,2,-5])
+        
+        print(sub_array)
+
