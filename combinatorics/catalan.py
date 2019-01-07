@@ -5,9 +5,8 @@ class Catalan:
     https://en.wikipedia.org/wiki/Catalan_number
     """
     def catalan_seq(self, n):
-        C = 1
+        C = 1.0
 
-        for i in range(n):
-            C = C * 2 * (2 * i + 1)/(i+2)
+        for i in range(2, n + 1): C = C * (n + i)/i
 
         return C

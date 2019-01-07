@@ -14,22 +14,21 @@ class BinaryTree:
         self.root = None
 
     def append(self, val):
-        self.insert(self.root, val)
+        self.root = self.insert(self.root, val)
 
     def insert(self, root, val):
-        if root:
-            if val < root.val:
-                if root.left: 
-                    self.insert(root.left, val)
-                else:
-                    root.left = BinaryTreeNode(val)
+        if not root: return BinaryTreeNode(val)     
+        if val < root.val:
+            if root.left: 
+                root.left = self.insert(root.left, val)
             else:
-                if root.right: 
-                    self.insert(root.right, val)
-                else:
-                    root.right = BinaryTreeNode(val)
+                root.left = BinaryTreeNode(val)
         else:
-            self.root = BinaryTreeNode(val)
+            if root.right: 
+                root.right = self.insert(root.right, val)
+            else:
+                root.right = BinaryTreeNode(val)
+        return root
 
     def invert(self):
         def i(root):

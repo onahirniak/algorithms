@@ -14,17 +14,24 @@ class ArrayHelper(object):
         max_current = max_so_far = arr[0]
 
         for n in arr[1:]:
-            max_current += n
+            max_current = max(n, max_current + n)
             max_so_far = max(max_so_far, max_current)
-            max_current = max(0, max_current)
             
         return max_so_far
+
+    def is_overlap(self, intervals):
+        # [(1,7),(2,3)]
+        # [0,0,0,0,0,0,0,0]
+        # [0,1,0,0,0,0,0,-1]
+        # [0,1,1,-1,0,0,0,-1]
+
+        return False
 
     def binary_search(self, arr, val):
         l,r = 0, len(arr) - 1
 
         while l <= r:
-            mid = (l+r) // 2
+            mid = (l+r) // 2 # 3//4 == 3/4 w/o reminder
 
             if arr[mid] == val:
                 return mid
