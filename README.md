@@ -1,6 +1,7 @@
 # Algorithms and data structures
 ### Useful articles and resources:
 
+* [Bit manipulation](https://www.hackerearth.com/ru/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/tutorial/)
 * [LeetCode](https://leetcode.com/)
 * [HackerRank](https://www.hackerrank.com/dashboard)
 * [InterviewBit](https://www.interviewbit.com/practice/)
