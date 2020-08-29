@@ -28,10 +28,10 @@ class ArrayHelper(object):
         return False
 
     def binary_search(self, arr, val):
-        l,r = 0, len(arr) - 1
+        l, r = 0, len(arr) - 1
 
         while l <= r:
-            mid = (l+r) // 2 # 3//4 == 3/4 w/o reminder
+            mid = (l+r) // 2 
 
             if arr[mid] == val:
                 return mid
@@ -41,4 +41,4 @@ class ArrayHelper(object):
             else:
                 l = mid + 1
             
-        return -1
+        return l

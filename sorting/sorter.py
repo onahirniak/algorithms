@@ -22,3 +22,14 @@ class Sorter:
                 j -= 1
             
             arr[j + 1] = arr[i]
+
+    def quicksort(self, seq):
+        if len(seq) <= 1: return seq
+        lo, pi, hi = self.partition(seq)
+        return self.quicksort(lo) + [pi] + self.quicksort(hi)
+
+    def partition(self, seq):
+        pi, seq = seq[0], seq[1:]
+        lo = [x for x in seq if x <= pi]
+        hi = [x for x in seq if x > pi]
+        return lo, pi, hi
