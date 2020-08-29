@@ -1,4 +1,4 @@
-from base.node import Node 
+from app.main.base.node import Node 
 
 class BinaryTreeNode(Node):
     def __init__(self, val):
@@ -33,15 +33,15 @@ class BinaryTree:
     def invert(self):
         def i(root):
             if not root:
-                return None;
+                return None
             
             tmp = root.left
-            root.left = root.right;
-            root.right = tmp;
+            root.left = root.right
+            root.right = tmp
             i(root.left)
             i(root.right)
 
-            return root;
+            return root
 
         return i(self.root)
 
@@ -127,7 +127,7 @@ class BinaryTree:
         if root:
             self.dfs_inorder_recursive(root.left)
             self.visit(root)
-            self.dfs_inorder_recursive(root.right);
+            self.dfs_inorder_recursive(root.right)
 
     def dfs_inorder_iterative(self, root):
 

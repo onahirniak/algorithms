@@ -39,22 +39,23 @@ class Graph(object):
                 self.dfs_util(sibling, visited)
     
     def shortest_path(self, start, end):
-        q, seen, dist = [(0,start,())], set(), {start: 0}
+        q, seen, dist = [(0,start)], set(), {start: 0}
 
         while q:
-            (cost,v1,path) = heappop(q)
+            (cost,v1) = heappop(q)
             if v1 in seen: continue
 
             seen.add(v1)
-            path += (v1,)
 
-            if v1 == end: return (cost, path)
+            if v1 == end: return dist
 
             for v2, c in self.graph[v1]:
                 if v2 in seen: continue
-                    
-                if v2 not in dist or cost+c < dist[v2]:
-                    dist[v2] = cost+c
-                    heappush(q, (cost+c, v2, path))
 
-        return float("inf")
+                total_cost = cost+c
+
+                if v2 not in dist or total_cost < dist[v2][0]:
+                    dist[v2] = (total_cost, v1)
+                    heappush(q, (total_cost, v2))
+
+        return dist
