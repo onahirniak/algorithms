@@ -6,6 +6,9 @@ class UserState():
         self.left_diagonal = 0
         self.right_diagonal = 0
 
+'''
+348. Design Tic-Tac-Toe - https://leetcode.com/problems/design-tic-tac-toe/
+'''
 class TicTacToe():
     def __init__(self, board_size):
         self.board_size = board_size
