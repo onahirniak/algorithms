@@ -14,7 +14,7 @@ class HashTable(object):
         self.encryptor = Encryption()
 
     def put(self, key, value):
-        index = self.get_index(key);
+        index = self.get_index(key)
         if self.buckets[index]:
             node = self.buckets[index]
             
@@ -31,7 +31,7 @@ class HashTable(object):
             self.buckets[index] = HashTableNode(key, value)
     
     def get(self, key):
-        index = self.get_index(key);
+        index = self.get_index(key)
         if self.buckets[index]:
             node = self.buckets[index]
             if node.key == key:
