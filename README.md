@@ -22,7 +22,7 @@
 * [Systems Design Interview](https://github.com/checkcheckzz/system-design-interview)
 
 ### Interviews
-* [Interviewting.IO](https://start.interviewing.io/)
+* [Interviewing.IO](https://start.interviewing.io/)
 * [Pramp](https://www.pramp.com/dashboard)
 
 ## Implemented
